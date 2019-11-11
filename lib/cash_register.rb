@@ -50,7 +50,11 @@ end
     @all_items
   end
     
-    def void_last_transaction
-    end 
+   
+  def void_last_transaction
+    @total = @total - @last_transaction.last
+
+  end
+
     
   end 
