@@ -27,9 +27,15 @@ def total
   @total 
 end 
 
-def add_item(title, price, quantity=1) 
-  @total = total + price*quantity 
-  end 
+  def add_item(item, price, quantity = 1)
+    @total += price * quantity
+    quantity.times do
+      @all_items << item
+    end
+    @last_transaction << price
+
+  end
+
   
     def apply_discount
     if discount != 0
